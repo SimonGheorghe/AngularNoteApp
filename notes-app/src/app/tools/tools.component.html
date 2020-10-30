@@ -1,0 +1,28 @@
+<!-- <body>
+    <p [style.color]="titleColor" [style.backgroundColor]="backgroundColor">Titlu : {{title}} </p>
+    <p>Note is : {{noteContent}}</p>
+    <p>
+        <mat-form-field appearence='fill'>
+            <input matInput placeholder="Add Note" [(ngModel)]="noteContent" />
+        </mat-form-field>
+        <button mat-icon-button (click)="setTitle()">
+            <mat-icon>
+                add
+            </mat-icon>
+        </button>
+    </p>
+    <mat-form-field appearence='fill'>
+        <input matInput placeholder="Title Background Color" [(ngModel)]="color" />
+    </mat-form-field>
+    <button (click)="setBackgroundColor()">
+        <mat-icon id = "BGicon">
+        cached
+    </mat-icon> 
+        Set background
+    </button>
+</body> -->
+<mat-card class="add-note-card">
+    <button mat-icon-button routerLink="add-note">
+        <mat-icon>add</mat-icon>
+    </button>
+</mat-card>

@@ -1,0 +1,36 @@
+<div class="noteList">
+    <div *ngFor="let note of notes; let index = index">
+        <mat-card class="note" [style.background-color] = "getColor(index)">
+            <div>
+                <mat-card-header>
+                    <mat-card-title>{{note.title}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{note.text}}</p>
+                </mat-card-content>
+            </div>
+            <div id="buttons">
+                <div>
+                    <button mat-icon-button (click) = "setCategoryId(note.id, '1')" class="button">
+                        <mat-icon>arrow_right_alt</mat-icon>
+                    </button>
+                    <button mat-icon-button (click) = "setCategoryId(note.id, '2')" class="button">
+                        <mat-icon>star_half</mat-icon>
+                    </button>
+                    <button mat-icon-button (click) = "setCategoryId(note.id, '3')" class="button">
+                        <mat-icon>done_outline</mat-icon>
+                    </button>
+                </div>
+                <div>
+                    <button mat-icon-button>
+                        <mat-icon>create</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </mat-card>
+
+    </div>
+</div>

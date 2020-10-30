@@ -1,0 +1,16 @@
+<p>dummy2 works!</p>
+<p>Even elements:</p>
+<div *ngFor="let item of items; let i=index; let odd = even">
+    <div *ngIf="odd">{{item}}</div>
+</div>
+<p>Color directive test</p>
+<div>
+    <input type="radio" name="colors" (click)="color='blue'">Blue
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='red'">Red
+</div>
+<p [appChangeColor]="color">Color me!</p>
+
+<p [appChangeColor]="color" defaultColor="darkgreen">
+    Color me too!
+</p>
